@@ -25,9 +25,6 @@ const Header = () => {
             <ul
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-              <li>
-                <a>Item 1</a>
-              </li>
               <li tabIndex={0}>
                 <a className="justify-between">
                   Parent
@@ -43,7 +40,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className=" normal-case text-3xl font-extrabold ">JobPortal</a>
+          <Link to="/" className=" normal-case text-2xl font-extrabold ">JobPortal</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className=" flex gap-16 px-1 font-semibold text-slate-500 ">
