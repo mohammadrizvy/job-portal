@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 
+the-container{
+    @apply pl-44 pr-44
+}

@@ -40,7 +40,11 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <Link to="/" className=" normal-case text-2xl font-extrabold ">JobPortal</Link>
+          <Link
+            to="/"
+            className=" normal-case text-2xl font-extrabold text-black ">
+            JobPortal
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className=" flex gap-16 px-1 font-semibold text-slate-500 ">

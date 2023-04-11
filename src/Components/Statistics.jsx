@@ -1,65 +1,35 @@
-import React from 'react';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import React from "react";
+import { PieChart, Pie, Tooltip } from "recharts";
 
+const marks = [
+  { name: "Assingment 1", value: 50 },
+  { name: "Assingmen 2 skipped", value: 0 },
+  { name: "Assingment 3 ", value: 30 },
+  { name: "Assingment 4", value: 55 },
+  { name: "Assingment 5", value: 45 },
+  { name: "Assingment 6", value: 53 },
+  { name: "Assingment 7", value: 60 },
+  { name: "Assingment 8", value: 54 },
+];
 
-const Statistics = () => {
+export default function App() {
+  return (
+    <div className="text-center">
+      <h1 className="mt-5 bg-purple-950 text-white p-6 font-bold text-3xl w-[45%] m-auto">Assingment Marks Statistics</h1>
+      <PieChart width={1000} height={400}>
+        <Pie
+          dataKey="value"
+          isAnimationActive={false}
+          data={marks}
+          cx={200}
+          cy={200}
+          outerRadius={80}
+          fill="purple"
+          label
+        />
 
-  const marksArry = [
-    {
-      assignment: "Assignment : 1",
-      marks: 50,
-    },
-    {
-      assignment: "Assignment : 2 Skipped",
-      marks: 0,
-    },
-    {
-      assignment: "Assignment : 3",
-      marks: 30,
-    },
-    {
-      assignment: "Assignment : 4",
-      marks: 55,
-    },
-    {
-      assignment: "Assignment : 5",
-      marks: 45,
-    },
-    {
-      assignment: "Assignment : 6",
-      marks: 53,
-    },
-    {
-      assignment: "Assignment : 7",
-      marks: 60,
-    },
-    {
-      assignment: "Assignment : 8",
-      marks: 54,
-    },
-  ];
-
-    return (
-      <div className=''>
-        <LineChart width={1300} height={300} data={marksArry}>
-          <Line dataKey="marks"></Line>
-          <XAxis dataKey="assignment" />
-          <YAxis></YAxis>
-          <Tooltip></Tooltip>
-          <Legend></Legend>
-          <CartesianGrid ></CartesianGrid>
-        </LineChart>
-      </div>
-    );
-};
-
-export default Statistics;
+        <Tooltip />
+      </PieChart>
+    </div>
+  );
+}
