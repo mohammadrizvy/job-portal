@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
-the-container{
-    @apply pl-44 pr-44
+.the-container{
+    @apply pl-44 pr-44 
+}
+
+.the-button{
+    @apply mt-4 bg-blue-400 text-white
 }

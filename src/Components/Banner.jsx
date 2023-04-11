@@ -4,7 +4,7 @@ import lottie from "../assets/interview.json";
 const Banner = () => {
   return (
     <div>
-      <div className=" flex flex-col items-center justify-between pl-44 pr-44 lg:flex-row mt-10">
+      <div className=" flex flex-col items-center justify-between the-container lg:flex-row mt-10">
         <div>
           <p className="text-5xl text-black font-extrabold">One Step</p>
           <br />
@@ -17,7 +17,7 @@ const Banner = () => {
             need. Its your future. Come find it. Manage all your job application
             from start to finish.
           </p>
-          <button className="btn mt-4 bg-blue-400 text-white">
+          <button className="btn the-button">
             Get Started
           </button>
         </div>
