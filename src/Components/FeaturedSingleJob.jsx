@@ -10,6 +10,7 @@ const FeaturedSingleJob = ({ job }) => {
     jobTime,
     jobStatus,
     salary,
+    id,
   } = job;
   return (
     <div className=" m-auto mt-10 p-10 outline-blue-500 shadow-sm rounded-md justify-center border border-slate-50-500">
@@ -38,7 +39,7 @@ const FeaturedSingleJob = ({ job }) => {
 
       {/* view details button  */}
 
-      <Link to={`/job/&{id}`}>
+      <Link to={`/job/${id}`}>
         <button className="btn the-button">View Details</button>
       </Link>
     </div>
