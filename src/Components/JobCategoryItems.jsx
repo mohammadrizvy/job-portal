@@ -8,7 +8,7 @@ const JobCategoryItems = ({category}) => {
         <span>
           <img src={img} className="rounded-md pb-4" alt="" />
         </span>
-        <span className="font-extrabold text-base pt-4">{categoryName}</span>{" "}
+        <span className="font-extrabold text-base pt-4">{categoryName}</span>
         <br />
         <span className="text-xs font-semibold text-slate-500 pt-4">
           {jobAmount}

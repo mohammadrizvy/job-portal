@@ -1,6 +1,14 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import FeaturedSingleJob from './FeaturedSingleJob';
 
 const FeaturedJob = () => {
+
+  
+
+  const jobs = useLoaderData();
+    // console.log(jobs)
+
     return (
       <div>
         <div className="">
@@ -12,8 +20,13 @@ const FeaturedJob = () => {
             need. Its your future
           </p>
         </div>
-        <div className="">
-          
+        <div className="the-container grid gap-4 mb-8 lg:grid-cols-2 sm:grid-cols-1">
+         {
+          jobs.map( job => <FeaturedSingleJob
+          key={job.id}
+          job ={job}
+          ></FeaturedSingleJob>)
+         }
         </div>
       </div>
     );

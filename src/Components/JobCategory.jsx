@@ -4,7 +4,7 @@ import JobCategoryItems from "./JobCategoryItems";
 const JobCategory = () => {
   const [category, setCategory] = useState([]);
   useEffect(() => {
-    fetch("jobCategory.json")
+    fetch("/jobCategory.json")
       .then((res) => res.json())
       .then((data) => setCategory(data));
   }, []);
@@ -19,7 +19,7 @@ const JobCategory = () => {
           need. Its your future
         </p>
       </div>
-      <div className="category-items the-container flex justify-center gap-12 mt-10">
+      <div className="category-items the-container justify-center gap-12 mt-10 grid lg:grid-cols-4 md:grid-cols-2 sm: grid-cols-2 ">
         {category.map((category) => (
           <JobCategoryItems
             key={category.id}
